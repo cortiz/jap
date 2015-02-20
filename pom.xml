@@ -1,4 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~                Copyright (C) 2007-$date.year JMPEAX.
+  ~
+  ~    This program is free software: you can redistribute it and/or modify
+  ~     it under the terms of the GNU General Public License as published by
+  ~     the Free Software Foundation, either version 3 of the License, or
+  ~     (at your option) any later version.
+  ~
+  ~      This program is distributed in the hope that it will be useful,
+  ~      but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~      MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~      GNU General Public License for more details.
+  ~
+  ~      You should have received a copy of the GNU General Public License
+  ~      along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -9,6 +26,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>jab-http</module>
+        <module>jap-test-war</module>
     </modules>
     <name>Java Asset Pipeline (Jap) Parent</name>
     <packaging>pom</packaging>
@@ -56,6 +74,11 @@
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.7</version>
+        </dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
@@ -252,8 +275,8 @@
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-failsafe-report-plugin</artifactId>
-                <version>2.18</version>
+                <artifactId>maven-surefire-report-plugin</artifactId>
+                <version>2.18.1</version>
             </plugin>
             <plugin>
                 <groupId>org.jacoco</groupId>
